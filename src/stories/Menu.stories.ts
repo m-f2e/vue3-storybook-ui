@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import MMenu from '../../src/components/Menu/index'
-import MMenuItem from '../../src/components/Menu/menuItem'
-import MSubMenu from '../../src/components/Menu/subMenu'
+import MMenu from '../components/Menu/index'
+import MMenuItem from '../components/Menu/menuItem'
+import MSubMenu from '../components/Menu/subMenu'
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 const meta = {
