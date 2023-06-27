@@ -1,22 +1,25 @@
 import { PropType } from 'vue'
 
-enum ButtonTypes {
+export type TButtonType = 'primary' | 'link' | 'danger' | 'default'
+export type TButtonSize = 'large' | 'small'
+
+enum ButtonTypeEnum {
   PRIMARY = 'primary',
   LINK = 'link',
   DANGER = 'danger',
   DEFAULT = 'default',
 }
 
-enum SizeTypes {
+enum ButtonSizeEnum {
   LARGE = 'large',
   SMALL = 'small',
 }
 
-const btnProps = () => ({
+const ButtonProps = () => ({
   label: String,
   type: {
-    type: String as PropType<ButtonTypes>,
-    default: ButtonTypes.DEFAULT
+    type: String as PropType<TButtonType>,
+    default: ButtonTypeEnum.DEFAULT
   },
   href: String,
   disabled: {
@@ -25,13 +28,13 @@ const btnProps = () => ({
   },
   backgroundColor: String,
   size: {
-    type: String as PropType<SizeTypes>,
-    default: SizeTypes.SMALL
+    type: String as PropType<TButtonSize>,
+    default: ButtonSizeEnum.SMALL
   }
 })
 
 export {
-  btnProps,
-  ButtonTypes,
-  SizeTypes,
+  ButtonProps,
+  ButtonTypeEnum,
+  ButtonSizeEnum,
 }

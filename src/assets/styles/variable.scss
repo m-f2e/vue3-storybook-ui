@@ -1,4 +1,5 @@
-$m-pre: m-;
+$m-pre: 'm-';
+
 $white-color: #fff;
 $border-color: #d9d9d9;
 $dash-border-color: #f0f0f0;
@@ -14,8 +15,6 @@ $font-size-base: 16px;
 $font-size-mid: $font-size-base + 2;
 $font-size-large: $font-size-base + 4;
 $font-size-huge: $font-size-base + 10;
-
-$lib-pre: 'm-';
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -109,7 +108,7 @@ $body-text-align: null !default;
 // $spacer: 1rem !default;
 $spacer: 1rem;
 
-$headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: calc($spacer / 2) !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
@@ -121,7 +120,7 @@ $headings-color: null !default;
 $paragraph-margin-bottom: 1rem !default;
 
 // 字体其他部分 heading list hr 等等
-$headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: calc($spacer / 2) !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;

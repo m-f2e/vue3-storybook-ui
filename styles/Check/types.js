@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=()=>({value:{type:Boolean,default:!1},disabled:{type:Boolean,default:!1},halfChecked:{type:Boolean,default:!1},onChange:Function});exports.CheckProps=e;

@@ -1,63 +1,7 @@
 @import '../../assets/styles/variable.scss';
 @import '../../assets/styles/mixin.scss';
 
-.btn-large {
-  @include button-size(
-    $btn-padding-y-lg,
-    $btn-padding-x-lg,
-    $btn-font-size-lg,
-    $btn-border-radius-lg
-  );
-}
-.btn-small {
-  @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x-sm,
-    $btn-font-size-sm,
-    $btn-border-radius-sm
-  );
-}
-
-.btn-primary {
-  @include button-style($primary, $primary, $white);
-}
-.btn-danger {
-  @include button-style($danger, $danger, $white);
-}
-
-.btn-default {
-  @include button-style(
-    $white,
-    $gray-400,
-    $body-color,
-    $white,
-    $primary,
-    $primary
-  );
-}
-
-.btn-link {
-  font-weight: $font-weight-normal !important;
-  color: $btn-link-color  !important;
-  text-decoration: $link-decoration !important;
-  box-shadow: none !important;
-  &:hover {
-    color: $btn-link-hover-color !important;
-    text-decoration: $link-hover-decoration !important;
-  }
-  &:focus,
-  &.focus {
-    text-decoration: $link-hover-decoration !important;
-    box-shadow: none !important;
-  }
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color !important;
-    pointer-events: none !important;
-  }
-}
-
-.btn {
+.#{$m-pre}btn {
   position: relative;
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -91,7 +35,47 @@
   }
 }
 
-.btn-large {
+.#{$m-pre}btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+
+.#{$m-pre}btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+
+.#{$m-pre}btn-default {
+  @include button-style(
+    $white,
+    $gray-400,
+    $body-color,
+    $white,
+    $primary,
+    $primary
+  );
+}
+
+.#{$m-pre}btn-link {
+  font-weight: $font-weight-normal !important;
+  color: $btn-link-color  !important;
+  text-decoration: $link-decoration !important;
+  box-shadow: none !important;
+  &:hover {
+    color: $btn-link-hover-color !important;
+    text-decoration: $link-hover-decoration !important;
+  }
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration !important;
+    box-shadow: none !important;
+  }
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color !important;
+    pointer-events: none !important;
+  }
+}
+
+.#{$m-pre}btn-large {
   @include button-size(
     $btn-padding-y-lg,
     $btn-padding-x-lg,
@@ -99,7 +83,7 @@
     $btn-border-radius-lg
   );
 }
-.btn-small {
+.#{$m-pre}btn-small {
   @include button-size(
     $btn-padding-y-sm,
     $btn-padding-x-sm,

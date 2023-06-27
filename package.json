@@ -8,10 +8,20 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:types": "tsc --project src/components/tsconfig.json",
+    "build:lib": "rm  -rf ./dist && pnpm build:types && vite build --config vite.config.component.ts",
+    "build:bundle": "vite build --config vite.config.bundle.ts"
   },
+  "files": [
+    "lib"
+  ],
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "typings": "./dist/typings/index.d.ts",
   "dependencies": {
     "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
     "vue": "^3.2.47"
   },
   "devDependencies": {
@@ -22,6 +32,7 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "@storybook/vue3": "^7.0.23",
     "@storybook/vue3-vite": "^7.0.23",
+    "@types/lodash": "^4.14.195",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "react": "^18.2.0",
@@ -30,6 +41,7 @@
     "storybook": "^7.0.23",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "3.0.0-beta.1",
     "vue-tsc": "^1.4.2"
   }
 }

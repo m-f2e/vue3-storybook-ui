@@ -1,30 +1,23 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+   <!-- <button-demo />
+   <menu-demo /> -->
+   <!-- <check-demo /> -->
+   <!-- <tree-demo /> -->
+   <m-button type="danger" label="button"></m-button>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup lang="ts">
+// import ButtonDemo from './components/Button/demo.vue'
+// import MenuDemo from './components/Menu/demo.vue'
+// import CheckDemo from './components/Check/demo.vue'
+// import TreeDemo from './components/Tree/demo.vue'
+// import { MButton } from '../dist/es'
+// import '../dist/styles/index.css'
+import { MButton } from '../dist/vue3-storybook-ui'
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>

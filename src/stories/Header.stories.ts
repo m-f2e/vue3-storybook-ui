@@ -9,13 +9,13 @@ const meta = {
    */
   title: 'Example/Header',
   component: MyHeader,
-  render: (args: any) => ({
-    components: { MyHeader },
-    setup() {
-      return { args };
-    },
-    template: '<my-header :user="args.user" />',
-  }),
+  // render: (args: any) => ({
+  //   components: { MyHeader },
+  //   setup() {
+  //     return { args };
+  //   },
+  //   template: '<my-header :user="args.user" />',
+  // }),
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
