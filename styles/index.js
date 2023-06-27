@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});require("./Button/index.js");require("./Tree/index.js");const e=require("./Button/button.js"),t=require("./Tree/tree.js"),u=[e,t];function n(r){u.forEach(o=>{o.install(r)})}exports.MButton=e;exports.MTree=t;exports.default=n;

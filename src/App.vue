@@ -3,8 +3,8 @@
    <!-- <button-demo />
    <menu-demo /> -->
    <!-- <check-demo /> -->
-   <!-- <tree-demo /> -->
-   <m-button type="danger" label="button"></m-button>
+   <!-- <m-button type="danger" label="button"></m-button> -->
+   <tree-demo />
   </div>
 </template>
 
@@ -12,10 +12,10 @@
 // import ButtonDemo from './components/Button/demo.vue'
 // import MenuDemo from './components/Menu/demo.vue'
 // import CheckDemo from './components/Check/demo.vue'
-// import TreeDemo from './components/Tree/demo.vue'
 // import { MButton } from '../dist/es'
 // import '../dist/styles/index.css'
-import { MButton } from '../dist/vue3-storybook-ui'
+// import { MButton } from '../dist/vue3-storybook-ui'
+import TreeDemo from './components/Tree/demo.vue'
 </script>
 
 <style scoped>
