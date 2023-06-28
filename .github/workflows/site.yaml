@@ -17,8 +17,9 @@ jobs:
         with:
           version: 8
       - name: Install and Builld 🔧
-        run: pnpm install --no-frozen-lockfile
-        run: pnpm build-storybook
+        run: |
+          pnpm install --no-frozen-lockfile
+          pnpm build-storybook
       - name: Deploy 🚀
         uses: crazy-max/ghaction-github-pages@v2
         with:
