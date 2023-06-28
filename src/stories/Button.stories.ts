@@ -5,7 +5,6 @@ import MButton from '../components/Button/index'
 const meta = {
   title: 'Example/MButton',
   component: MButton,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
     type: { control: 'select', options: ['default', 'primary', 'danger'], defaultValue: 'default' },
