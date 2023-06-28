@@ -109,7 +109,7 @@ export const TreeDefault: Story = {
     setup() {
       return { args };
     },
-    template: `<m-tree :source="args.source" :show-checkbox="args.showCheckbox">`,
+    template: `<m-tree :source="args.source" :show-checkbox="args.showCheckbox" />`,
   }),
 };
 
