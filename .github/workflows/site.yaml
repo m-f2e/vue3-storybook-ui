@@ -1,7 +1,8 @@
 name: site
 on:
   push:
-    paths: ["stories/**"]
+    paths: 
+      - stories/**
     tags:
       - site*
 
