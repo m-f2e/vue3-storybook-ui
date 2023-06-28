@@ -2,8 +2,7 @@ name: site
 on:
   push:
     paths: ["stories/**"]
-    tags:
-      - site*
+    tags: ["site*"]
 
 jobs:
   build-and-deploy:
