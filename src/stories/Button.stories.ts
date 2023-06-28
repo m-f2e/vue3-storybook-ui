@@ -12,9 +12,9 @@ const meta = {
     backgroundColor: { control: 'color' },
     label: { control: 'text' },
   },
-  args: { 
+  args: { // default value
     label: 'Button'
-  }, // default value
+  }, 
 } satisfies Meta<typeof MButton>;
 
 export default meta;

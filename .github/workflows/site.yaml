@@ -2,9 +2,9 @@ name: site
 on:
   push:
     paths: 
-      - stories/**
+      - "stories/**"
     tags:
-      - site*
+      - v*
 
 jobs:
   build-and-deploy:
