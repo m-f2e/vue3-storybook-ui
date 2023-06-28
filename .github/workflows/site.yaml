@@ -1,24 +1,26 @@
 name: site
 on:
   push:
+    paths: 
+      - src/stories/**
     tags:
       - site*
 
 jobs:
-  site:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.1.0
+      - name: Checkout ⏰
+        uses: actions/checkout@v2
+      - name: install pnpm 8
+        uses: pnpm/action-setup@v2.1.0
         with:
           version: 8
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: git pull origin main:main
-      # - run: pnpm install --no-frozen-lockfile
-      # - run: pnpm build-storybook
-      - uses: crazy-max/ghaction-github-pages@v2
+      - name: Install and Builld 🔧
+        run: pnpm install --no-frozen-lockfile
+        run: pnpm build-storybook
+      - name: Deploy 🚀
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
           build_dir: storybook-static
