@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 import MButton from '../components/Button/index'
 
+// 类型配置
 const meta = {
   title: 'Example/MButton',
   component: MButton,
