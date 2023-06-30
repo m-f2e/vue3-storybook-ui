@@ -56,7 +56,7 @@ export default defineConfig({
                     } catch(e) {
                       console.error(\'vite-plugin-css-injected-by-js\', e);
                     } 
-                  })()
+                  })();
                   `;
                   // 拼接原有代码
                   chunk.code += initialCode;
