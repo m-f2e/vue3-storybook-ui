@@ -1,7 +1,7 @@
 import { CustomEventFuncType } from "../utils/types";
 
 const CheckProps = () => ({
-  value: { // value
+  modelValue: { // value
     type: Boolean,
     default: false
   },

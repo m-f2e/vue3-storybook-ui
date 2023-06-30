@@ -1,24 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import MCheck from '../components/Check/index'
+import MInput from '../components/Input/index'
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 const meta = {
-  title: 'Example/MCheck',
-  component: MCheck,
+  title: 'Example/MInput',
+  component: MInput,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    modelValue: { control: 'boolean' },
     disabled: { control: 'boolean' },
-    halfChecked: { control: 'boolean' },
+    size: { control: 'select', options: ['small', 'large'] },
+    modelValue: { control: 'text' },
+    prepend: { control: 'text' },
+    append: { control: 'text' },
   },
   args: { 
-    modelValue: false,
+    modelValue: 'placeholder',
     disabled: false,
-    halfChecked: false,
   }, // default value
-} satisfies Meta<typeof MCheck>;
+} satisfies Meta<typeof MInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -27,27 +28,28 @@ type Story = StoryObj<typeof meta>;
  * See https://storybook.js.org/docs/vue/api/csf
  * to learn how to use render functions.
  */
-export const Value: Story = {
+export const Input: Story = {
   args: {
-    modelValue: true,
+    // modelValue: 'placeholder',
+    // disabled: false,
   },
   render: (args: any) => ({
-    components: { MCheck },
+    components: { MInput },
     setup() {
       return { args };
     },
-    template: `<m-check v-model="args.modelValue" :disabled="args.disabled" :halfChecked="args.halfChecked">选中</m-check>`,
+    template: `<m-input v-model="args.modelValue" :disabled="args.disabled" :size="args.size" :prepend="args.prepend" :append="args.append" />`,
   })
 };
 
-export const ContentChecked: Story = {
+export const InputStyle: Story = {
   args: {
   },
   render: (args: any) => ({
-    components: { MCheck },
+    components: { MInput },
     setup() {
       return { args };
     },
-    template: `<m-check v-model="args.modelValue" :disabled="args.disabled" :halfChecked="args.halfChecked">选中</m-check>`,
+    template: `<m-input style="width: 200px" v-model="args.modelValue" :disabled="args.disabled" :size="args.size" :prepend="args.prepend" :append="args.append" />`,
   })
 };

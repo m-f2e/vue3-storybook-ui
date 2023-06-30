@@ -2,11 +2,11 @@
   <div class="demo-box">
     <div>
       value: {{ value }}
-      <a-checkbox v-model:value="value" />
-    </div>
-    <a-checkbox halfChecked v-model:value="value" /><br/>
-    <a-checkbox v-model:value="value" disabled /><br/>
-    <a-checkbox v-model:value="value">
+      <a-checkbox v-model="value" />
+    </div><br>
+    <a-checkbox halfChecked v-model="value" /><br/>
+    <a-checkbox v-model="value" disabled /><br/>
+    <a-checkbox v-model="value">
       选中
     </a-checkbox>
   </div>

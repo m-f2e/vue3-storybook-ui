@@ -6,10 +6,11 @@ import './index.scss'
 export default defineComponent({
   name: 'MCheck',
   props: CheckProps(),
+  emits: ['update:modelValue', 'change'],
   setup(props, { slots, emit }) {
     const classes = computed(() => {
       return classNames('m-checkbox', {
-        checked: props.value,
+        checked: props.modelValue,
         'half-checked': props.halfChecked,
         disabled: props.disabled,
       });
@@ -18,8 +19,8 @@ export default defineComponent({
     const handleClick = (event: MouseEvent) => {
       event.stopPropagation();
       if (!props.disabled) {
-        emit('update:value', !props.value);
-        emit('change', !props.value);
+        emit('update:modelValue', !props.modelValue);
+        emit('change', !props.modelValue);
       }
     }
 
